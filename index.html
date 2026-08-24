@@ -272,6 +272,13 @@ code { font-size: 12px; background: var(--marino-suave); color: var(--marino);
 .hz-vacio { color: var(--tinta-3); }
 .hz-celda .tt { margin-left: 4px; vertical-align: top; }
 
+
+/* El camino recorrido, bajo cada fila de la tabla de posiciones */
+.fila-camino td { border-bottom: 1px solid var(--linea); padding-top: 0; }
+.pos-camino { margin: 0 0 4px; font-size: 12.3px; color: var(--tinta-2);
+  white-space: normal; }
+.pos-camino.muted { color: var(--tinta-3); font-style: italic; }
+
 /* ---- tablas ---- */
 .tabla-wrap { overflow-x: auto; background: var(--sup); border: 1px solid var(--anillo);
   border-radius: 11px; }
@@ -334,7 +341,7 @@ footer strong { color: var(--tinta-2); }
       <div class="marca-txt"><b>Trading</b><span>Aeroespacial y defensa</span></div>
     </div>
     <div class="sello">
-      Datos al <strong>23-08-2026 19:48</strong><br>
+      Datos al <strong>23-08-2026 20:10</strong><br>
       <span class="estado"><span class="punto "></span>Mercado cerrado &middot; ultimo dato del cierre anterior</span>
     </div>
   </div>
@@ -2729,7 +2736,7 @@ footer strong { color: var(--tinta-2); }
       </div>
     </details>
   <footer>
-    <strong>AeroCV Trading</strong> &middot; generado el 23-08-2026 a las 19:48.
+    <strong>AeroCV Trading</strong> &middot; generado el 23-08-2026 a las 20:10.
     Se actualiza solo de lunes a viernes cada 2 horas en horario de mercado, y la pagina
     se recarga sola cada 10 minutos: puedes dejarla abierta.<br>
     Precios de Yahoo Finance, cierres ajustados por dividendos y splits.
