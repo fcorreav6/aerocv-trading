@@ -120,6 +120,16 @@ code { font-size: 12px; background: var(--marino-suave); color: var(--marino);
 .spark-baja polyline, .spark-baja circle { stroke: var(--baja); }
 .spark-baja polygon, .spark-baja circle { fill: var(--baja); }
 .spark-vacio { font-size: 11px; color: var(--tinta-3); }
+/* Asterisco amarillo: recien paso de ESPERAR PISO a COMPRAR BARATO. Simbolo
+   real (no icono), pedido tal cual por Francisco; el color se separa del
+   sistema de veredictos (que ya usa verde/rojo/azul/gris) para no competir
+   con esa paleta, asi que usa el dorado de advertencia que ya existe en la
+   app para "esto necesita tu atencion". */
+.estrella-nueva { display: inline-flex; margin-left: 3px; }
+.estrella-nueva .tt-icono { background: var(--warn); color: #3d2c00;
+  border-color: var(--warn); font-weight: 900; font-size: 13px; line-height: 1; }
+.estrella-nueva .tt-icono:hover { background: #e0a30f; }
+
 /* Marca donde compraste, dentro del sparkline de una posicion propia. Color
    marino (cromo de marca, no de dato) para que no se confunda con sube/baja:
    este punto no dice si algo va bien, dice donde entraste tu. */
@@ -365,8 +375,8 @@ footer strong { color: var(--tinta-2); }
       <div class="marca-txt"><b>Trading</b><span>Aeroespacial y defensa</span></div>
     </div>
     <div class="sello">
-      Datos al <strong>25-08-2026 08:12</strong><br>
-      <span class="estado"><span class="punto "></span>Mercado cerrado &middot; ultimo dato del cierre anterior</span>
+      Datos al <strong>25-08-2026 09:22</strong><br>
+      <span class="estado"><span class="punto abierto"></span>Mercado abierto</span>
     </div>
   </div>
 </div>
@@ -2760,7 +2770,7 @@ footer strong { color: var(--tinta-2); }
       </div>
     </details>
   <footer>
-    <strong>AeroCV Trading</strong> &middot; generado el 25-08-2026 a las 08:13.
+    <strong>AeroCV Trading</strong> &middot; generado el 25-08-2026 a las 09:22.
     Se actualiza solo de lunes a viernes cada 2 horas en horario de mercado, y la pagina
     se recarga sola cada 10 minutos: puedes dejarla abierta.<br>
     Precios de Yahoo Finance, cierres ajustados por dividendos y splits.
