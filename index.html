@@ -120,6 +120,12 @@ code { font-size: 12px; background: var(--marino-suave); color: var(--marino);
 .spark-baja polyline, .spark-baja circle { stroke: var(--baja); }
 .spark-baja polygon, .spark-baja circle { fill: var(--baja); }
 .spark-vacio { font-size: 11px; color: var(--tinta-3); }
+/* Marca donde compraste, dentro del sparkline de una posicion propia. Color
+   marino (cromo de marca, no de dato) para que no se confunda con sube/baja:
+   este punto no dice si algo va bien, dice donde entraste tu. */
+.spark-compra-linea { stroke: var(--marino); stroke-width: 1; stroke-dasharray: 2 1.5;
+  opacity: .55; }
+.spark-compra-punto { fill: var(--marino); stroke: var(--sup); stroke-width: 1; }
 
 /* ---- veredictos: color + icono + etiqueta, nunca color solo ---- */
 .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px;
@@ -331,6 +337,14 @@ footer strong { color: var(--tinta-2); }
 </style>
 </head>
 <body>
+<script>
+  // Al abrir como app instalada (PWA o el acceso de escritorio), el navegador
+  // a veces restaura la posicion de scroll de la ultima vez que se cerro.
+  // Se fuerza a arrancar arriba, en "Mi cartera", que es la pregunta con la
+  // que Francisco quiere encontrarse primero: como viene mi plata hoy.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+</script>
 <div class="barra">
   <div class="barra-in">
     <div class="marca">
@@ -351,7 +365,7 @@ footer strong { color: var(--tinta-2); }
       <div class="marca-txt"><b>Trading</b><span>Aeroespacial y defensa</span></div>
     </div>
     <div class="sello">
-      Datos al <strong>24-08-2026 23:24</strong><br>
+      Datos al <strong>24-08-2026 23:29</strong><br>
       <span class="estado"><span class="punto "></span>Mercado cerrado &middot; ultimo dato del cierre anterior</span>
     </div>
   </div>
@@ -2746,7 +2760,7 @@ footer strong { color: var(--tinta-2); }
       </div>
     </details>
   <footer>
-    <strong>AeroCV Trading</strong> &middot; generado el 24-08-2026 a las 23:24.
+    <strong>AeroCV Trading</strong> &middot; generado el 24-08-2026 a las 23:29.
     Se actualiza solo de lunes a viernes cada 2 horas en horario de mercado, y la pagina
     se recarga sola cada 10 minutos: puedes dejarla abierta.<br>
     Precios de Yahoo Finance, cierres ajustados por dividendos y splits.
